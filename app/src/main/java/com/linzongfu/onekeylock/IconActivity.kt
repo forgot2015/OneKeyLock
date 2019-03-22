@@ -23,6 +23,7 @@ class IconActivity : AppCompatActivity() {
     private lateinit var mComponent5: ComponentName
 
     private var selectIconIndex = -1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_icon)
@@ -41,11 +42,11 @@ class IconActivity : AppCompatActivity() {
 
         btnConfirm.setOnClickListener {
             if (selectIconIndex == -1) {
-                Toast.makeText(this, "请先选择锁屏图标", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.selected_icon_before), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             changeIcon(selectIconIndex)
-            Toast.makeText(this, "修改成功，需要等待 3~10 秒", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.success_and_wait), Toast.LENGTH_LONG).show()
             finish()
         }
     }
@@ -101,7 +102,6 @@ class IconActivity : AppCompatActivity() {
     }
 
     private fun disableComponent(componentName: ComponentName) {
-        Log.e("disableComponent", componentName.toShortString())
         mPackageManager?.setComponentEnabledSetting(
                 componentName,
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
@@ -110,7 +110,6 @@ class IconActivity : AppCompatActivity() {
     }
 
     private fun enableComponent(componentName: ComponentName) {
-        Log.e("enableComponent", componentName.toShortString())
         mPackageManager?.setComponentEnabledSetting(
                 componentName,
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,

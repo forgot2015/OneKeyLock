@@ -20,9 +20,6 @@ open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setTheme(R.style.translucent)    //设置透明的Activity
-//        transParentStatusBarAndBottomNavigationBar()   //透明状态栏和底部导航栏
-
         //获取设备管理服务
         policyManager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         //AdminReceiver 继承自 DeviceAdminReceiver
@@ -32,11 +29,8 @@ open class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        Log.e("onActivityResult", "RESULT")
 //        没收到设备激活的回调，为何？
         if (requestCode == MY_REQUEST_CODE && resultCode == RESULT_OK) {
-            Log.e("onActivityResult", "RESULT_OK")
-            Toast.makeText(this, "onActivityResult", Toast.LENGTH_SHORT).show()
             if (!policyManager!!.isAdminActive(lockComponentName!!)) {   //若无权限
                 killSelf()
             } else {
@@ -72,7 +66,7 @@ open class MainActivity : AppCompatActivity() {
         //权限列表
         intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, lockComponentName)
         //描述(additional explanation)
-        intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "激活后才可以使用锁屏功能 ")
+        intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, getString(R.string.active_before_use))
         startActivityForResult(intent, MY_REQUEST_CODE)
     }
 
