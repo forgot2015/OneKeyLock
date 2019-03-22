@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              tools:context=".IconActivity">
+
+    <RadioGroup
+            android:id="@+id/rgButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+                android:id="@+id/rbIcon1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_lock1"/>
+
+        <RadioButton
+                android:id="@+id/rbIcon2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_lock2"/>
+
+        <RadioButton
+                android:id="@+id/rbIcon3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_lock3"/>
+
+        <RadioButton
+                android:id="@+id/rbIcon4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_lock4"/>
+
+        <RadioButton
+                android:id="@+id/rbIcon5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_lock5"/>
+    </RadioGroup>
+
+    <Button
+            android:id="@+id/btnConfirm"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:padding="16sp"
+            android:text="确认"
+            android:textSize="25sp"/>
+</LinearLayout>
