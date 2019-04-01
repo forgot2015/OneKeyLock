@@ -1,5 +1,6 @@
 package com.linzongfu.onekeylock
 
+import android.app.Activity.RESULT_OK
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
@@ -8,6 +9,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.core.content.ContextCompat.getSystemService
 
 /**
  *由于Android系统安全设置问题，7.0以上版本的系统，点击此进行锁屏之后，只能使用密码解锁，而不能使用指纹和人脸等

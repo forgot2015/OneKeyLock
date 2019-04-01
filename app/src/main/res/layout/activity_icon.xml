@@ -56,6 +56,6 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:padding="16sp"
-            android:text="确认"
+            android:text="@string/btn_confirm"
             android:textSize="25sp"/>
 </LinearLayout>

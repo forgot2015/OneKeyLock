@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">OneKey Lock</string>
-    <string name="active_before_use">please active to use</string>
-    <string name="selected_icon_before">please select icon</string>
-    <string name="success_and_wait">succeed, please wait about ten seconds</string>
+    <string name="active_before_use">Please active to use</string>
+    <string name="selected_icon_before">Please select icon</string>
+    <string name="success_and_wait">Succeed, please wait about ten seconds</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="lock_icon_setting">Lock Icon Setting</string>
 </resources>

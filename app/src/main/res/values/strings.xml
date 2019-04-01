@@ -3,4 +3,6 @@
     <string name="active_before_use">激活后才可以使用锁屏功能</string>
     <string name="selected_icon_before">请先选择锁屏图标</string>
     <string name="success_and_wait">修改成功，需要等待 3~10 秒</string>
+    <string name="btn_confirm">确认</string>
+    <string name="lock_icon_setting">锁屏图标设置</string>
 </resources>
